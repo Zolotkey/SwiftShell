@@ -261,6 +261,12 @@ public class PrintedAsyncCommand {
 
 	/// Is the command still running?
 	public var isRunning: Bool { process.isRunning }
+  
+    // What is the comamnds pid?
+    public func pid() {
+       print(process.processIdentifier)
+
+    }
 
 	/// Terminates the command by sending the SIGTERM signal.
 	public func stop() {
